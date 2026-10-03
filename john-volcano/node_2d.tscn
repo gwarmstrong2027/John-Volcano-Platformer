@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cl3m2ngg7ta1h"]
+
+[ext_resource type="Texture2D" uid="uid://r1gqtr5dhn3f" path="res://assets/pixilart-drawing.png" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=181317245]
+
+[node name="PixilartDrawing" type="Sprite2D" parent="." unique_id=1855652627]
+position = Vector2(292, 414)
+texture = ExtResource("1_wtcfe")
