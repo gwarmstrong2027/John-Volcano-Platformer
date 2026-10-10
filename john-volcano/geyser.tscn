@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://besvfl7168kg1"]
+
+[ext_resource type="Script" uid="uid://7b24of0143lt" path="res://geyser.gd" id="1_qy1ym"]
+[ext_resource type="Texture2D" uid="uid://kax7ckxalp3u" path="res://assets/pixil-frame-0 (1).png" id="1_rqxl3"]
+[ext_resource type="Texture2D" uid="uid://bxbc5ackxyjkc" path="res://assets/pixil-frame-0.png" id="3_o5wxd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
+size = Vector2(70, 70)
+
+[node name="Geyser" type="Area2D" unique_id=1590750778]
+script = ExtResource("1_qy1ym")
+
+[node name="DisabledGeyser" type="Sprite2D" parent="." unique_id=962795969]
+texture = ExtResource("3_o5wxd")
+
+[node name="EnabledGeyser" type="Sprite2D" parent="." unique_id=2001807824]
+texture = ExtResource("1_rqxl3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2093328169]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_qmg03")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

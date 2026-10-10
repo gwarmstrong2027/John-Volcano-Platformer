@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cdoo1uaqcqirs"]
+
+[ext_resource type="Texture2D" uid="uid://dtsrvdq22rrl" path="res://assets/pixil-frame-0 (3).png" id="1_mi635"]
+
+[node name="Platform" type="Node2D" unique_id=293543346]
+
+[node name="Lava Block" type="StaticBody2D" parent="." unique_id=1924188621]
+position = Vector2(549, 504)
+scale = Vector2(4.27, 4.27)
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Lava Block" unique_id=794759395]
+position = Vector2(-6.557373, -13.817329)
+scale = Vector2(0.99999875, 0.99999875)
+polygon = PackedVector2Array(11.70961, -4.4496536, 12.646378, -3.512886, 11.241226, -0.9367676, 9.133499, -0.2341919, 7.025772, 1.6393509, 3.7470703, 5.1522293, -1.405159, 4.4496536, -4.4496613, 2.8103104, -8.430931, 1.8735428, -9.836082, -0.4683838, -12.880585, -3.512886, -11.007042, -4.4496536, 11.70961, -4.4496536)
+
+[node name="Sprite2D" type="Sprite2D" parent="Lava Block" unique_id=1190502771]
+position = Vector2(-6.528104, -11.211944)
+scale = Vector2(0.27107728, 0.27107728)
+texture = ExtResource("1_mi635")

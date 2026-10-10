@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dl8k10n1vdyup"]
+
+[ext_resource type="Script" uid="uid://5id2wwl614km" path="res://crumbling_platform.gd" id="1_bl0io"]
+[ext_resource type="Texture2D" uid="uid://d0bes32l43j6c" path="res://assets/pixil-frame-0 (4) (1).png" id="1_hku3q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmg03"]
+size = Vector2(37, 3)
+
+[node name="Node2D" type="StaticBody2D" unique_id=1566326456]
+script = ExtResource("1_bl0io")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1563753067]
+position = Vector2(456, 154)
+texture = ExtResource("1_hku3q")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1193915702]
+position = Vector2(456, 154)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1159137043]
+position = Vector2(-1.5, -15.5)
+shape = SubResource("RectangleShape2D_qmg03")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=680393560]
+position = Vector2(456, 154)
+polygon = PackedVector2Array(-20, -14, 16, -14, 18, -13, 18, -9, 17, -7, 17, -2, 8, 16, 7, 17, 0, 16, -3, 14, -5, 10, -15, 9, -21, 4, -22, -1, -24, -7)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
